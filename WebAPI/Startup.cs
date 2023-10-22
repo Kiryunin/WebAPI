@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.HttpOverrides;
 using NLog;
-using ShopApi.Extensions;
 using WebAPI.Extensions;
 
 namespace ShopApi;
@@ -9,8 +8,7 @@ public class Startup
 {
     public Startup(IConfiguration configuration)
     {
-        LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(),
-            "/nlog.config"));
+        LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
         Configuration = configuration;
     }
 
