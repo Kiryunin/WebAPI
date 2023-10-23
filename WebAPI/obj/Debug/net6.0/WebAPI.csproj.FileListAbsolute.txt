@@ -96,3 +96,6 @@ C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Entities.dll
 C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Entities.pdb
 C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Repository.dll
 C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Repository.pdb
+C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Newtonsoft.Json.dll

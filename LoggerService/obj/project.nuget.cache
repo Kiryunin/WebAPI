@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vQ2zIB5a955Mkt2w7pDvBoE0U3r7z6+nSnlh6xoMT2LoWvEYv3RuOHWgqvKX82mELXL9F+h1GIYJIvK/jJwDgA==",
+  "dgSpecHash": "vLB2hyjsSzbSwdX670F9G5Jj30DuXMgoy+xr+bmpBZrVLfIPLcaQV9GmidrJsTw4SdDlUF46QxLg2gqPsY+SGQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\LoggerService\\LoggerService.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Kirill\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\nlog\\5.0.1\\nlog.5.0.1.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\nlog.extensions.logging\\5.0.1\\nlog.extensions.logging.5.0.1.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
