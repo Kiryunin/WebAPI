@@ -13,3 +13,5 @@ C:\Users\Kirill\source\repos\WebAPI\LoggerService\obj\Debug\net6.0\LoggerService
 C:\Users\Kirill\source\repos\WebAPI\LoggerService\obj\Debug\net6.0\refint\LoggerService.dll
 C:\Users\Kirill\source\repos\WebAPI\LoggerService\obj\Debug\net6.0\LoggerService.pdb
 C:\Users\Kirill\source\repos\WebAPI\LoggerService\obj\Debug\net6.0\ref\LoggerService.dll
+C:\Users\Kirill\source\repos\WebAPI\LoggerService\bin\Debug\net6.0\Entities.dll
+C:\Users\Kirill\source\repos\WebAPI\LoggerService\bin\Debug\net6.0\Entities.pdb

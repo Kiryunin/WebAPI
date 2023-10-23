@@ -1,3 +1,5 @@
+using Contracts;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -6,23 +8,20 @@ namespace WebAPI.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IRepositoryManager _repository;
+        private Company _company;
+        private Employee _employee;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(IRepositoryManager repository)
         {
-            _logger = logger;
+            _repository = repository;
         }
 
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            _logger.LogInformation("¬от информационное сообщение от нашего контроллера значений.");
-
-            _logger.LogDebug("¬от отладочное сообщение от нашего контроллера значений.");
-
-            _logger.LogWarning("¬от сообщение предупреждени€ от нашего контроллера значений.");
-
-            _logger.LogError("¬от сообщение об ошибке от нашего контроллера значений.");
+            _repository.Company.Delete1(_company);
+            _repository.Employee.Create1(_employee);
             return new string[] { "value1", "value2" };
         }
     }
