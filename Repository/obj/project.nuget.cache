@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "E5lllF1MdnfaZsUIIMwPMWSiQFJSXL4OQ1Q063FAql1XeVWP5EHS/6a/004+4G3XDv8rVkvyuDfkM3M3i1FmpA==",
+  "dgSpecHash": "Q2CVwMdUupk2NMhNUHS+A2Bu7+2kaXOEH/C/PRicCHbPEMnzulPYEMVlxu0L0OU+6yQG+bdmqnI8tkeSRoRZ5w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Kirill\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

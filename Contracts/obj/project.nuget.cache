@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ztLlCttpIBy+SkfwYugIAEIxv7MrL5v5TQO5btq3g3t8vFt9HT2wPwmxFRjon6LEXhQoMg7RHk99LUcpcVt5QA==",
+  "dgSpecHash": "G+wplVYslImelM27hm1rAdcZpqGR8Gj4SLG+yF5nWo7Q+sdUQGSVsDbGmUF2HpvhgBI2tvUULfWhWghQ9RT0EA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Contracts\\Contracts.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Kirill\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
