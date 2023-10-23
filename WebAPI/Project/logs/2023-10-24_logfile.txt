@@ -1,0 +1,1 @@
+2023-10-24 00:33:43.4898 INFO School with id: 03544a2b-3d4a-437f-9037-e67d1e7de1ef doesn't exist in the database.

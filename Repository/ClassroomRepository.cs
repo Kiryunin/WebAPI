@@ -9,5 +9,11 @@ namespace Repository
         public ClassroomRepository(RepositoryContext repositoryContext): base(repositoryContext)
         {
         }
+
+        public IEnumerable<Classroom> GetClassrooms(Guid schoolId, bool trackChanges) => FindByCondition(c => c.SchoolId.Equals(schoolId), trackChanges).OrderBy(c => c.Type);
+        public Classroom GetClassroom(Guid schoolId, Guid id, bool trackChanges) => FindByCondition(c => c.SchoolId.Equals(schoolId) && c.Id.Equals(id),
+            trackChanges).SingleOrDefault();
+
+
     }
 }
