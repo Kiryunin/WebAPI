@@ -14,6 +14,10 @@ namespace Repository
         public Classroom GetClassroom(Guid schoolId, Guid id, bool trackChanges) => FindByCondition(c => c.SchoolId.Equals(schoolId) && c.Id.Equals(id),
             trackChanges).SingleOrDefault();
 
-
+        public void CreateClassroomForSchool(Guid schoolId, Classroom classroom)
+        {
+            classroom.SchoolId = schoolId;
+            Create(classroom);
+        }
     }
 }

@@ -12,6 +12,10 @@ namespace WebAPI
             CreateMap<Employee, EmployeeDto>();
             CreateMap<School, SchoolDto>().ForMember(s => s.FullAddress, opt => opt.MapFrom(x => string.Join(' ', x.Address, x.City, x.Country)));
             CreateMap<Classroom, ClassroomDto>();
+            CreateMap<CompanyForCreationDto, Company>();
+            CreateMap<EmployeeForCreationDto, Employee>();
+            CreateMap<SchoolForCreationDto, School>();
+            CreateMap<ClassroomForCreationDto, Classroom>();
         }
     }
 }

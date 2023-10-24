@@ -11,6 +11,8 @@ namespace Repository
         }
         public IEnumerable<School> GetAllSchools(bool trackChanges) => FindAll(trackChanges).OrderBy(s => s.NameAndNumber).ToList();
         public School GetSchool(Guid schoolId, bool trackChanges) => FindByCondition(s => s.Id.Equals(schoolId), trackChanges).SingleOrDefault();
+        public void CreateSchool(School school) => Create(school);
+        public IEnumerable<School> GetByIds(IEnumerable<Guid> ids, bool trackChanges) => FindByCondition(x => ids.Contains(x.Id), trackChanges).ToList();
 
     }
 }

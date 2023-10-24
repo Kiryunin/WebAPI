@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Contracts;
 using Entities.DataTransferObjects;
+using Entities.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,7 +36,7 @@ namespace WebAPI.Controllers
             return Ok(classroomssDto);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetClassroomForSchool")]
         public IActionResult GetClassroomForSchool(Guid schoolId, Guid id)
         {
             var school = _repository.School.GetSchool(schoolId, trackChanges: false);
@@ -52,6 +53,28 @@ namespace WebAPI.Controllers
             }
             var classroom = _mapper.Map<ClassroomDto>(classroomDb);
             return Ok(classroom);
+        }
+
+        [HttpPost]
+        public IActionResult CreateClassroomForSchool(Guid schoolId, [FromBody] ClassroomForCreationDto classroom)
+        {
+            if (classroom == null)
+            {
+                _logger.LogError("ClassroomForCreationDto object sent from client is null.");
+                return BadRequest("ClassroomForCreationDto object is null");
+            }
+            var school = _repository.Company.GetCompany(schoolId, trackChanges: false);
+            if (school == null)
+            {
+                _logger.LogInfo($"School with id: {schoolId} doesn't exist in the database.");
+                return NotFound();
+            }
+            var classroomEntity = _mapper.Map<Classroom>(classroom);
+            _repository.Classroom.CreateClassroomForSchool(schoolId, classroomEntity);
+            _repository.Save();
+            var classroomToReturn = _mapper.Map<ClassroomDto>(classroomEntity);
+            return CreatedAtRoute("GetClassroomForSchool", new
+            { schoolId, id = classroomToReturn.Id }, classroomToReturn);
         }
     }
 }

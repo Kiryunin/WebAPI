@@ -20,8 +20,7 @@ namespace WebAPI.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            _repository.Company.Delete1(_company);
-            _repository.Employee.Create1(_employee);
+            
             return new string[] { "value1", "value2" };
         }
     }
