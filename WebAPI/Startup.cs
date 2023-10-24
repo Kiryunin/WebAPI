@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
+using WebAPI.ActionFilters;
 using WebAPI.Extensions;
 
 namespace ShopApi;
@@ -36,6 +37,11 @@ public class Startup
         {
             options.SuppressModelStateInvalidFilter = true;
         });
+        services.AddScoped<ValidationFilterAttribute>();
+        services.AddScoped<ValidateCompanyExistsAttribute>();
+        services.AddScoped<ValidateSchoolExistsAttribute>();
+        services.AddScoped<ValidateEmployeeForCompanyExistsAttribute>();
+        services.AddScoped<ValidateClassroomForSchoolExistsAttribute>();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
     }

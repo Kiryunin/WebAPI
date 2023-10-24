@@ -2,9 +2,12 @@
 using Contracts;
 using Entities.DataTransferObjects;
 using Entities.Models;
+using Entities.RequestFeatures;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using WebAPI.ActionFilters;
 
 namespace WebAPI.Controllers
 {
@@ -24,15 +27,19 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetClassroomsForSchool(Guid schoolId)
+        public async Task<IActionResult> GetClassroomsForSchool(Guid schoolId, [FromQuery] ClassroomParameters classroomParameters)
         {
+            if (!classroomParameters.ValidAgeRange)
+                return BadRequest("Max number of seats can't be less than min number of seats.");
+
             var school = await _repository.School.GetSchoolAsync(schoolId, trackChanges: false);
             if (school == null)
             {
                 _logger.LogInfo($"School with id: {schoolId} doesn't exist in the database.");
                 return NotFound();
             }
-            var classroomsFromDb = await _repository.Classroom.GetClassroomsAsync(schoolId, trackChanges: false);
+            var classroomsFromDb = await _repository.Classroom.GetClassroomsAsync(schoolId, classroomParameters, trackChanges: false);
+            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(classroomsFromDb.MetaData));
             var classroomssDto = _mapper.Map<IEnumerable<ClassroomDto>>(classroomsFromDb);
             return Ok(classroomssDto);
         }
@@ -57,6 +64,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> CreateClassroomForSchoolAsync(Guid schoolId, [FromBody] ClassroomForCreationDto classroom)
         {
             if (classroom == null)
@@ -84,56 +92,29 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ServiceFilter(typeof(ValidateClassroomForSchoolExistsAttribute))]
+
         public async Task<IActionResult> DeleteClassroomForSchool (Guid schoolId, Guid id)
         {
-            var school = await _repository.Company.GetCompanyAsync(schoolId, trackChanges: false);
-            if (school == null)
-            {
-                _logger.LogInfo($"School with id: {schoolId} doesn't exist in the database.");
-                return NotFound();
-            }
-            var classroomForSchool= await _repository.Classroom.GetClassroomAsync(schoolId, id, trackChanges: false);
-            if (classroomForSchool == null)
-            {
-                _logger.LogInfo($"Classroom with id: {id} doesn't exist in the database.");
-                return NotFound();
-            }
+            var classroomForSchool = HttpContext.Items["classroom"] as Classroom;
             _repository.Classroom.DeleteClassroom(classroomForSchool);
             await _repository.SaveAsync();
             return NoContent();
         }
 
         [HttpPut("{id}")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
+        [ServiceFilter(typeof(ValidateClassroomForSchoolExistsAttribute))]
         public async Task<IActionResult> UpdateClassroomForSchool(Guid schoolId, Guid id, [FromBody] ClassroomForUpdateDto classroom)
         {
-            if (classroom == null)
-            {
-                _logger.LogError("ClassroomForUpdateDto object sent from client is null.");
-                return BadRequest("ClassroomForUpdateDto object is null");
-            }
-            if (!ModelState.IsValid)
-            {
-                _logger.LogError("Invalid model state for the EmployeeForUpdateDto object");
-                return UnprocessableEntity(ModelState);
-            }
-            var school = await _repository.School.GetSchoolAsync(schoolId, trackChanges: false);
-            if (school == null)
-            {
-                _logger.LogInfo($"Company with id: {schoolId} doesn't exist in the database.");
-                return NotFound();
-            }
-            var classroomEntity = await _repository.Classroom.GetClassroomAsync(schoolId, id, trackChanges: true);
-            if (classroomEntity == null)
-            {
-                _logger.LogInfo($"Classroom with id: {id} doesn't exist in the database.");
-                return NotFound();
-            }
+            var classroomEntity = HttpContext.Items["classroom"] as Classroom;
             _mapper.Map(classroom, classroomEntity);
             await _repository.SaveAsync();
             return NoContent();
         }
 
         [HttpPatch("{id}")]
+        [ServiceFilter(typeof(ValidateClassroomForSchoolExistsAttribute))]
         public async Task<IActionResult> PartiallyUpdateClassroomForSchool(Guid schoolId, Guid id, [FromBody] JsonPatchDocument<ClassroomForUpdateDto> patchDoc)
         {
             if (patchDoc == null)
@@ -141,18 +122,7 @@ namespace WebAPI.Controllers
                 _logger.LogError("patchDoc object sent from client is null.");
                 return BadRequest("patchDoc object is null");
             }
-            var company = await _repository.School.GetSchoolAsync(schoolId, trackChanges: false);
-            if (company == null)
-            {
-                _logger.LogInfo($"School with id: {schoolId} doesn't exist in the database.");
-                return NotFound();
-            }
-            var classroomEntity = await _repository.Classroom.GetClassroomAsync(schoolId, id, trackChanges: true);
-            if (classroomEntity == null)
-            {
-                _logger.LogInfo($"Classroom with id: {id} doesn't exist in the database.");
-                return NotFound();
-            }
+            var classroomEntity = HttpContext.Items["classroom"] as Classroom;
             var classroomToPatch = _mapper.Map<ClassroomForUpdateDto>(classroomEntity);
             patchDoc.ApplyTo(classroomToPatch, ModelState);
             TryValidateModel(classroomToPatch);

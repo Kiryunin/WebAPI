@@ -4,6 +4,7 @@ using Entities.DataTransferObjects;
 using Entities.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebAPI.ActionFilters;
 using WebAPI.ModelBinders;
 
 namespace WebAPI.Controllers
@@ -47,18 +48,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> CreateSchool([FromBody] SchoolForCreationDto school)
         {
-            if (school == null)
-            {
-                _logger.LogError("SchoolForCreationDto object sent from client is null.");
-                return BadRequest("SchoolForCreationDto object is null");
-            }
-            if (!ModelState.IsValid)
-            {
-                _logger.LogError("Invalid model state for the EmployeeForCreationDto object");
-                return UnprocessableEntity(ModelState);
-            }
             var schoolEntity = _mapper.Map<School>(school);
             _repository.School.CreateSchool(schoolEntity);
             await _repository.SaveAsync();
@@ -104,33 +96,21 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ServiceFilter(typeof(ValidateSchoolExistsAttribute))]
         public async Task<IActionResult> DeleteSchool (Guid id)
         {
-            var school = await _repository.School.GetSchoolAsync(id, trackChanges: false);
-            if (school == null)
-            {
-                _logger.LogInfo($"School with id: {id} doesn't exist in the database.");
-                return NotFound();
-            }
+            var school = HttpContext.Items["school"] as School;
             _repository.School.DeleteSchool(school);
             await _repository.SaveAsync();
             return NoContent();
         }
 
         [HttpPut("{id}")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
+        [ServiceFilter(typeof(ValidateSchoolExistsAttribute))]
         public async Task<IActionResult> UpdateCompany(Guid id, [FromBody] SchoolForUpdateDto school)
-        {
-            if (school == null)
-            {
-                _logger.LogError("SchoolForUpdateDto object sent from client is null.");
-                return BadRequest("SchoolForUpdateDto object is null");
-            }
-            var schoolEntity = await _repository.School.GetSchoolAsync(id, trackChanges: true);
-            if (schoolEntity == null)
-            {
-                _logger.LogInfo($"School with id: {id} doesn't exist in the database.");
-                return NotFound();
-            }
+        {           
+            var schoolEntity = HttpContext.Items["school"] as School;
             _mapper.Map(school, schoolEntity);
             await _repository.SaveAsync();
             return NoContent();
