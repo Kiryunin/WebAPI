@@ -6,6 +6,6 @@
         IEmployeeRepository Employee { get; }
         ISchoolRepository School { get; }
         IClassroomRepository Classroom { get; }
-        void Save();
+        Task SaveAsync();
     }
 }

@@ -23,17 +23,17 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetSchools() 
+        public async Task<IActionResult> GetSchools() 
         {
-            var schools = _repository.School.GetAllSchools(trackChanges: false);
+            var schools = await _repository.School.GetAllSchoolsAsync(trackChanges: false);
             var schoolsDto = _mapper.Map<IEnumerable<SchoolDto>>(schools);
             return Ok(schoolsDto);
         }
 
         [HttpGet("{id}", Name = "SchoolById")]
-        public IActionResult GetSchool(Guid id)
+        public async Task<IActionResult> GetSchool(Guid id)
         {
-            var school = _repository.School.GetSchool(id, trackChanges: false);
+            var school = await _repository.School.GetSchoolAsync(id, trackChanges: false);
             if (school == null)
             {
                 _logger.LogInfo($"School with id: {id} doesn't exist in the database.");
@@ -47,29 +47,34 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateSchool([FromBody] SchoolForCreationDto school)
+        public async Task<IActionResult> CreateSchool([FromBody] SchoolForCreationDto school)
         {
             if (school == null)
             {
                 _logger.LogError("SchoolForCreationDto object sent from client is null.");
                 return BadRequest("SchoolForCreationDto object is null");
             }
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the EmployeeForCreationDto object");
+                return UnprocessableEntity(ModelState);
+            }
             var schoolEntity = _mapper.Map<School>(school);
             _repository.School.CreateSchool(schoolEntity);
-            _repository.Save();
+            await _repository.SaveAsync();
             var schoolToReturn = _mapper.Map<SchoolDto>(schoolEntity);
             return CreatedAtRoute("SchoolById", new { id = schoolToReturn.Id }, schoolToReturn);
         }
 
         [HttpGet("collection/({ids})", Name = "SchoolCollection")]
-        public IActionResult GetSchoolCollection([ModelBinder(BinderType = typeof(ArrayModelBinder))] IEnumerable<Guid> ids)
+        public async Task<IActionResult> GetSchoolCollection([ModelBinder(BinderType = typeof(ArrayModelBinder))] IEnumerable<Guid> ids)
         {
             if (ids == null)
             {
                 _logger.LogError("Parameter ids is null");
                 return BadRequest("Parameter ids is null");
             }
-            var schoolEntities = _repository.School.GetByIds(ids, trackChanges: false);
+            var schoolEntities = await _repository.School.GetByIdsAsync(ids, trackChanges: false);
             if (ids.Count() != schoolEntities.Count())
             {
                 _logger.LogError("Some ids are not valid in a collection");
@@ -80,7 +85,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("collection")]
-        public IActionResult CreateSchoolCollection([FromBody] IEnumerable<SchoolForCreationDto> schoolCollection)
+        public async Task<IActionResult> CreateSchoolCollection([FromBody] IEnumerable<SchoolForCreationDto> schoolCollection)
         {
             if (schoolCollection == null)
             {
@@ -92,42 +97,42 @@ namespace WebAPI.Controllers
             {
                 _repository.School.CreateSchool(school);
             }
-            _repository.Save();
+            await _repository.SaveAsync();
             var schoolCollectionToReturn = _mapper.Map<IEnumerable<SchoolDto>>(schoolEntities);
             var ids = string.Join(",", schoolCollectionToReturn.Select(c => c.Id));
             return CreatedAtRoute("SchoolCollection", new { ids }, schoolCollectionToReturn);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteSchool (Guid id)
+        public async Task<IActionResult> DeleteSchool (Guid id)
         {
-            var school = _repository.School.GetSchool(id, trackChanges: false);
+            var school = await _repository.School.GetSchoolAsync(id, trackChanges: false);
             if (school == null)
             {
                 _logger.LogInfo($"School with id: {id} doesn't exist in the database.");
                 return NotFound();
             }
             _repository.School.DeleteSchool(school);
-            _repository.Save();
+            await _repository.SaveAsync();
             return NoContent();
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateCompany(Guid id, [FromBody] SchoolForUpdateDto school)
+        public async Task<IActionResult> UpdateCompany(Guid id, [FromBody] SchoolForUpdateDto school)
         {
             if (school == null)
             {
                 _logger.LogError("SchoolForUpdateDto object sent from client is null.");
                 return BadRequest("SchoolForUpdateDto object is null");
             }
-            var schoolEntity = _repository.School.GetSchool(id, trackChanges: true);
+            var schoolEntity = await _repository.School.GetSchoolAsync(id, trackChanges: true);
             if (schoolEntity == null)
             {
                 _logger.LogInfo($"School with id: {id} doesn't exist in the database.");
                 return NotFound();
             }
             _mapper.Map(school, schoolEntity);
-            _repository.Save();
+            await _repository.SaveAsync();
             return NoContent();
         }
     }

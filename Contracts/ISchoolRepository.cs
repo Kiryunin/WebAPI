@@ -4,10 +4,10 @@ namespace Contracts
 {
     public interface ISchoolRepository
     {
-        public IEnumerable<School> GetAllSchools(bool trackChanges);
-        public School GetSchool(Guid schoolId, bool trackChanges);
+        public Task<IEnumerable<School>> GetAllSchoolsAsync(bool trackChanges);
+        public Task<School> GetSchoolAsync(Guid schoolId, bool trackChanges);
         void CreateSchool(School school);
-        IEnumerable<School> GetByIds(IEnumerable<Guid> ids, bool trackChanges);
+        Task<IEnumerable<School>> GetByIdsAsync(IEnumerable<Guid> ids, bool trackChanges);
         void DeleteSchool(School school);
     }
 }

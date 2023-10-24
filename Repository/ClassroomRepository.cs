@@ -1,6 +1,7 @@
 ﻿using Contracts;
 using Entities;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Repository
 {
@@ -10,9 +11,9 @@ namespace Repository
         {
         }
 
-        public IEnumerable<Classroom> GetClassrooms(Guid schoolId, bool trackChanges) => FindByCondition(c => c.SchoolId.Equals(schoolId), trackChanges).OrderBy(c => c.Type);
-        public Classroom GetClassroom(Guid schoolId, Guid id, bool trackChanges) => FindByCondition(c => c.SchoolId.Equals(schoolId) && c.Id.Equals(id),
-            trackChanges).SingleOrDefault();
+        public async Task<IEnumerable<Classroom>> GetClassroomsAsync(Guid schoolId, bool trackChanges) => await FindByCondition(c => c.SchoolId.Equals(schoolId), trackChanges).OrderBy(c => c.Type).ToListAsync();
+        public Task<Classroom> GetClassroomAsync(Guid schoolId, Guid id, bool trackChanges) => FindByCondition(c => c.SchoolId.Equals(schoolId) && c.Id.Equals(id),
+            trackChanges).SingleOrDefaultAsync();
 
         public void CreateClassroomForSchool(Guid schoolId, Classroom classroom)
         {

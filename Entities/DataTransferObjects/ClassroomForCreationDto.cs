@@ -1,9 +1,7 @@
 ﻿namespace Entities.DataTransferObjects
 {
-    public class ClassroomForCreationDto
+    public class ClassroomForCreationDto: ClassroomForManipulationDto
     {
-        public string Type { get; set; }
-        public int NumberOfSeats { get; set; }
 
     }
 }

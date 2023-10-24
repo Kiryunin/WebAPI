@@ -1,5 +1,6 @@
 ﻿using Contracts;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Mvc;
 using NLog;
 using WebAPI.Extensions;
 
@@ -31,6 +32,10 @@ public class Startup
         }).AddNewtonsoftJson()
         .AddXmlDataContractSerializerFormatters()
         .AddCustomCSVFormatter();
+        services.Configure<ApiBehaviorOptions>(options =>
+        {
+            options.SuppressModelStateInvalidFilter = true;
+        });
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
     }

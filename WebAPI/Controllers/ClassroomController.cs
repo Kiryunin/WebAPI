@@ -24,29 +24,29 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetClassroomsForSchool(Guid schoolId)
+        public async Task<IActionResult> GetClassroomsForSchool(Guid schoolId)
         {
-            var school = _repository.School.GetSchool(schoolId, trackChanges: false);
+            var school = await _repository.School.GetSchoolAsync(schoolId, trackChanges: false);
             if (school == null)
             {
                 _logger.LogInfo($"School with id: {schoolId} doesn't exist in the database.");
                 return NotFound();
             }
-            var classroomsFromDb = _repository.Classroom.GetClassrooms(schoolId, trackChanges: false);
+            var classroomsFromDb = await _repository.Classroom.GetClassroomsAsync(schoolId, trackChanges: false);
             var classroomssDto = _mapper.Map<IEnumerable<ClassroomDto>>(classroomsFromDb);
             return Ok(classroomssDto);
         }
 
         [HttpGet("{id}", Name = "GetClassroomForSchool")]
-        public IActionResult GetClassroomForSchool(Guid schoolId, Guid id)
+        public async Task<IActionResult> GetClassroomForSchoolAsync(Guid schoolId, Guid id)
         {
-            var school = _repository.School.GetSchool(schoolId, trackChanges: false);
+            var school = await _repository.School.GetSchoolAsync(schoolId, trackChanges: false);
             if (school == null)
             {
                 _logger.LogInfo($"School with id: {schoolId} doesn't exist in the database.");
                 return NotFound();
             }
-            var classroomDb = _repository.Classroom.GetClassroom(schoolId, id, trackChanges: false);
+            var classroomDb = await _repository.Classroom.GetClassroomAsync(schoolId, id, trackChanges: false);
             if (classroomDb == null)
             {
                 _logger.LogInfo($"Employee with id: {id} doesn't exist in the database.");
@@ -57,14 +57,19 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateClassroomForSchool(Guid schoolId, [FromBody] ClassroomForCreationDto classroom)
+        public async Task<IActionResult> CreateClassroomForSchoolAsync(Guid schoolId, [FromBody] ClassroomForCreationDto classroom)
         {
             if (classroom == null)
             {
                 _logger.LogError("ClassroomForCreationDto object sent from client is null.");
                 return BadRequest("ClassroomForCreationDto object is null");
             }
-            var school = _repository.Company.GetCompany(schoolId, trackChanges: false);
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the EmployeeForCreationDto object");
+                return UnprocessableEntity(ModelState);
+            }
+            var school = await _repository.Company.GetCompanyAsync(schoolId, trackChanges: false);
             if (school == null)
             {
                 _logger.LogInfo($"School with id: {schoolId} doesn't exist in the database.");
@@ -72,81 +77,92 @@ namespace WebAPI.Controllers
             }
             var classroomEntity = _mapper.Map<Classroom>(classroom);
             _repository.Classroom.CreateClassroomForSchool(schoolId, classroomEntity);
-            _repository.Save();
+            await _repository.SaveAsync();
             var classroomToReturn = _mapper.Map<ClassroomDto>(classroomEntity);
             return CreatedAtRoute("GetClassroomForSchool", new
             { schoolId, id = classroomToReturn.Id }, classroomToReturn);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteClassroomForSchool (Guid schoolId, Guid id)
+        public async Task<IActionResult> DeleteClassroomForSchool (Guid schoolId, Guid id)
         {
-            var school = _repository.Company.GetCompany(schoolId, trackChanges: false);
+            var school = await _repository.Company.GetCompanyAsync(schoolId, trackChanges: false);
             if (school == null)
             {
                 _logger.LogInfo($"School with id: {schoolId} doesn't exist in the database.");
                 return NotFound();
             }
-            var classroomForSchool= _repository.Classroom.GetClassroom(schoolId, id, trackChanges: false);
+            var classroomForSchool= await _repository.Classroom.GetClassroomAsync(schoolId, id, trackChanges: false);
             if (classroomForSchool == null)
             {
                 _logger.LogInfo($"Classroom with id: {id} doesn't exist in the database.");
                 return NotFound();
             }
             _repository.Classroom.DeleteClassroom(classroomForSchool);
-            _repository.Save();
+            await _repository.SaveAsync();
             return NoContent();
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateClassroomForSchool(Guid schoolId, Guid id, [FromBody] ClassroomForUpdateDto classroom)
+        public async Task<IActionResult> UpdateClassroomForSchool(Guid schoolId, Guid id, [FromBody] ClassroomForUpdateDto classroom)
         {
             if (classroom == null)
             {
                 _logger.LogError("ClassroomForUpdateDto object sent from client is null.");
                 return BadRequest("ClassroomForUpdateDto object is null");
             }
-            var school = _repository.School.GetSchool(schoolId, trackChanges: false);
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the EmployeeForUpdateDto object");
+                return UnprocessableEntity(ModelState);
+            }
+            var school = await _repository.School.GetSchoolAsync(schoolId, trackChanges: false);
             if (school == null)
             {
                 _logger.LogInfo($"Company with id: {schoolId} doesn't exist in the database.");
                 return NotFound();
             }
-            var classroomEntity = _repository.Classroom.GetClassroom(schoolId, id, trackChanges: true);
+            var classroomEntity = await _repository.Classroom.GetClassroomAsync(schoolId, id, trackChanges: true);
             if (classroomEntity == null)
             {
                 _logger.LogInfo($"Classroom with id: {id} doesn't exist in the database.");
                 return NotFound();
             }
             _mapper.Map(classroom, classroomEntity);
-            _repository.Save();
+            await _repository.SaveAsync();
             return NoContent();
         }
 
         [HttpPatch("{id}")]
-        public IActionResult PartiallyUpdateClassroomForSchool(Guid schoolId, Guid id, [FromBody] JsonPatchDocument<ClassroomForUpdateDto> patchDoc)
+        public async Task<IActionResult> PartiallyUpdateClassroomForSchool(Guid schoolId, Guid id, [FromBody] JsonPatchDocument<ClassroomForUpdateDto> patchDoc)
         {
             if (patchDoc == null)
             {
                 _logger.LogError("patchDoc object sent from client is null.");
                 return BadRequest("patchDoc object is null");
             }
-            var company = _repository.School.GetSchool(schoolId, trackChanges: false);
+            var company = await _repository.School.GetSchoolAsync(schoolId, trackChanges: false);
             if (company == null)
             {
                 _logger.LogInfo($"School with id: {schoolId} doesn't exist in the database.");
                 return NotFound();
             }
-            var classroomEntity = _repository.Classroom.GetClassroom(schoolId, id, trackChanges: true);
+            var classroomEntity = await _repository.Classroom.GetClassroomAsync(schoolId, id, trackChanges: true);
             if (classroomEntity == null)
             {
                 _logger.LogInfo($"Classroom with id: {id} doesn't exist in the database.");
                 return NotFound();
             }
             var classroomToPatch = _mapper.Map<ClassroomForUpdateDto>(classroomEntity);
-            patchDoc.ApplyTo(classroomToPatch);
+            patchDoc.ApplyTo(classroomToPatch, ModelState);
+            TryValidateModel(classroomToPatch);
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the patch document");
+                return UnprocessableEntity(ModelState);
+            }
             _mapper.Map(classroomToPatch, classroomEntity);
-            _repository.Save();
+            await _repository.SaveAsync();
             return NoContent();
         }
     }
