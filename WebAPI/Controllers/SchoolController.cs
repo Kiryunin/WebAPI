@@ -97,5 +97,38 @@ namespace WebAPI.Controllers
             var ids = string.Join(",", schoolCollectionToReturn.Select(c => c.Id));
             return CreatedAtRoute("SchoolCollection", new { ids }, schoolCollectionToReturn);
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteSchool (Guid id)
+        {
+            var school = _repository.School.GetSchool(id, trackChanges: false);
+            if (school == null)
+            {
+                _logger.LogInfo($"School with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
+            _repository.School.DeleteSchool(school);
+            _repository.Save();
+            return NoContent();
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateCompany(Guid id, [FromBody] SchoolForUpdateDto school)
+        {
+            if (school == null)
+            {
+                _logger.LogError("SchoolForUpdateDto object sent from client is null.");
+                return BadRequest("SchoolForUpdateDto object is null");
+            }
+            var schoolEntity = _repository.School.GetSchool(id, trackChanges: true);
+            if (schoolEntity == null)
+            {
+                _logger.LogInfo($"School with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
+            _mapper.Map(school, schoolEntity);
+            _repository.Save();
+            return NoContent();
+        }
     }
 }

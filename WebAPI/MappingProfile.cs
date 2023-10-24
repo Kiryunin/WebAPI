@@ -16,6 +16,12 @@ namespace WebAPI
             CreateMap<EmployeeForCreationDto, Employee>();
             CreateMap<SchoolForCreationDto, School>();
             CreateMap<ClassroomForCreationDto, Classroom>();
+            CreateMap<EmployeeForUpdateDto, Employee>();
+            CreateMap<ClassroomForUpdateDto, Classroom>();
+            CreateMap<CompanyForUpdateDto, Company>();
+            CreateMap<SchoolForUpdateDto, School>();
+            CreateMap<EmployeeForUpdateDto, Employee>().ReverseMap();
+            CreateMap<ClassroomForUpdateDto, Classroom>().ReverseMap();
         }
     }
 }

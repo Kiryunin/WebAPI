@@ -28,7 +28,8 @@ public class Startup
             config.RespectBrowserAcceptHeader = true;
             config.ReturnHttpNotAcceptable = true;
 
-        }).AddXmlDataContractSerializerFormatters()
+        }).AddNewtonsoftJson()
+        .AddXmlDataContractSerializerFormatters()
         .AddCustomCSVFormatter();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();

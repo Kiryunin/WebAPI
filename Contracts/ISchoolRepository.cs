@@ -8,6 +8,6 @@ namespace Contracts
         public School GetSchool(Guid schoolId, bool trackChanges);
         void CreateSchool(School school);
         IEnumerable<School> GetByIds(IEnumerable<Guid> ids, bool trackChanges);
-
+        void DeleteSchool(School school);
     }
 }

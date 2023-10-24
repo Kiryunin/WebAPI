@@ -3,6 +3,7 @@ using Contracts;
 using Entities.DataTransferObjects;
 using Entities.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -75,6 +76,78 @@ namespace WebAPI.Controllers
             var classroomToReturn = _mapper.Map<ClassroomDto>(classroomEntity);
             return CreatedAtRoute("GetClassroomForSchool", new
             { schoolId, id = classroomToReturn.Id }, classroomToReturn);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteClassroomForSchool (Guid schoolId, Guid id)
+        {
+            var school = _repository.Company.GetCompany(schoolId, trackChanges: false);
+            if (school == null)
+            {
+                _logger.LogInfo($"School with id: {schoolId} doesn't exist in the database.");
+                return NotFound();
+            }
+            var classroomForSchool= _repository.Classroom.GetClassroom(schoolId, id, trackChanges: false);
+            if (classroomForSchool == null)
+            {
+                _logger.LogInfo($"Classroom with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
+            _repository.Classroom.DeleteClassroom(classroomForSchool);
+            _repository.Save();
+            return NoContent();
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateClassroomForSchool(Guid schoolId, Guid id, [FromBody] ClassroomForUpdateDto classroom)
+        {
+            if (classroom == null)
+            {
+                _logger.LogError("ClassroomForUpdateDto object sent from client is null.");
+                return BadRequest("ClassroomForUpdateDto object is null");
+            }
+            var school = _repository.School.GetSchool(schoolId, trackChanges: false);
+            if (school == null)
+            {
+                _logger.LogInfo($"Company with id: {schoolId} doesn't exist in the database.");
+                return NotFound();
+            }
+            var classroomEntity = _repository.Classroom.GetClassroom(schoolId, id, trackChanges: true);
+            if (classroomEntity == null)
+            {
+                _logger.LogInfo($"Classroom with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
+            _mapper.Map(classroom, classroomEntity);
+            _repository.Save();
+            return NoContent();
+        }
+
+        [HttpPatch("{id}")]
+        public IActionResult PartiallyUpdateClassroomForSchool(Guid schoolId, Guid id, [FromBody] JsonPatchDocument<ClassroomForUpdateDto> patchDoc)
+        {
+            if (patchDoc == null)
+            {
+                _logger.LogError("patchDoc object sent from client is null.");
+                return BadRequest("patchDoc object is null");
+            }
+            var company = _repository.School.GetSchool(schoolId, trackChanges: false);
+            if (company == null)
+            {
+                _logger.LogInfo($"School with id: {schoolId} doesn't exist in the database.");
+                return NotFound();
+            }
+            var classroomEntity = _repository.Classroom.GetClassroom(schoolId, id, trackChanges: true);
+            if (classroomEntity == null)
+            {
+                _logger.LogInfo($"Classroom with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
+            var classroomToPatch = _mapper.Map<ClassroomForUpdateDto>(classroomEntity);
+            patchDoc.ApplyTo(classroomToPatch);
+            _mapper.Map(classroomToPatch, classroomEntity);
+            _repository.Save();
+            return NoContent();
         }
     }
 }

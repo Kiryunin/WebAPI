@@ -99,3 +99,6 @@ C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Repository.pdb
 C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
