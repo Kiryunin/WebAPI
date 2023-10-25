@@ -28,6 +28,9 @@ namespace WebAPI.Controllers
             _dataShaper = dataShaper;
         }
 
+        /// <summary>
+        /// Получает список всех сотрудников для определенной компании
+        /// </summary>
         [HttpGet]
         [HttpHead]
         public async Task<IActionResult> GetEmployeesForCompany(Guid companyId, [FromQuery] EmployeeParameters employeeParameters)
@@ -46,6 +49,9 @@ namespace WebAPI.Controllers
             return Ok(_dataShaper.ShapeData(employeesDto, employeeParameters.Fields));
         }
 
+        /// <summary>
+        /// Получает определенного сотрудника для определенной компании
+        /// </summary>
         [HttpGet("{id}", Name = "GetEmployeeForCompany")]
         public async Task<IActionResult> GetEmployeeForCompany(Guid companyId, Guid id)
         {
@@ -65,6 +71,9 @@ namespace WebAPI.Controllers
             return Ok(employee);
         }
 
+        /// <summary>
+        /// Созает сотрудника для определенной компании
+        /// </summary>
         [HttpPost]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> CreateEmployeeForCompany(Guid companyId, [FromBody] EmployeeForCreationDto employee)
@@ -93,6 +102,9 @@ namespace WebAPI.Controllers
             { companyId, id = employeeToReturn.Id  }, employeeToReturn);
         }
 
+        /// <summary>
+        /// Удаляет сотрудника для определенной компании
+        /// </summary>
         [HttpDelete("{id}")]
         [ServiceFilter(typeof(ValidateEmployeeForCompanyExistsAttribute))]
         public async Task<IActionResult> DeleteEmployeeForCompany(Guid companyId, Guid id)
@@ -103,6 +115,9 @@ namespace WebAPI.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Редактирует сотрудника для определенной компании
+        /// </summary>
         [HttpPut("{id}")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         [ServiceFilter(typeof(ValidateEmployeeForCompanyExistsAttribute))]
@@ -114,6 +129,9 @@ namespace WebAPI.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Редактирует сотрудника для определенной компании
+        /// </summary>
         [HttpPatch("{id}")]
         [ServiceFilter(typeof(ValidateEmployeeForCompanyExistsAttribute))]
         public async Task<IActionResult> PartiallyUpdateEmployeeForCompany(Guid companyId, Guid id, [FromBody] JsonPatchDocument<EmployeeForUpdateDto> patchDoc)

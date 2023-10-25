@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:WebAPI.Controllers.ClassroomController.GetClassroomsForSchool(System.Guid,Entities.RequestFeatures.ClassroomParameters)">
+            <summary>
+            Получает список всех учебных классов для определенной школы
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.ClassroomController.GetClassroomForSchoolAsync(System.Guid,System.Guid)">
+            <summary>
+            Получает учебный класс для определенной школы
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.ClassroomController.CreateClassroomForSchoolAsync(System.Guid,Entities.DataTransferObjects.ClassroomForCreationDto)">
+            <summary>
+            Создает учебный класс для определенной школы
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.ClassroomController.DeleteClassroomForSchool(System.Guid,System.Guid)">
+            <summary>
+            Удаляет учебный класс для определенной школы
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.ClassroomController.UpdateClassroomForSchool(System.Guid,System.Guid,Entities.DataTransferObjects.ClassroomForUpdateDto)">
+            <summary>
+            Редактирует учебный класс для определенной школы
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.ClassroomController.PartiallyUpdateClassroomForSchool(System.Guid,System.Guid,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{Entities.DataTransferObjects.ClassroomForUpdateDto})">
+            <summary>
+            Редактирует учебный класс для определенной школы
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.CompaniesController.GetCompanies">
+            <summary>
+            Получает список всех компаний
+            </summary>
+            <returns> Список компаний</returns>.
+        </member>
+        <member name="M:WebAPI.Controllers.CompaniesController.GetCompany(System.Guid)">
+            <summary>
+            Получает компанию по id
+            </summary>
+            <returns> Список компаний</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.CompaniesController.CreateCompany(Entities.DataTransferObjects.CompanyForCreationDto)">
+            <summary>
+            Создает компанию
+            </summary>
+            <returns> Список компаний</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.CompaniesController.GetCompanyCollection(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Получает список определенных компаний
+            </summary>
+            <returns> Список компаний</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.CompaniesController.CreateCompanyCollection(System.Collections.Generic.IEnumerable{Entities.DataTransferObjects.CompanyForCreationDto})">
+            <summary>
+            Создает коллекцию компаний
+            </summary>
+            <returns> Список компаний</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.CompaniesController.DeleteCompany(System.Guid)">
+            <summary>
+            Удаляет компанию
+            </summary>
+            <returns> Список компаний</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.CompaniesController.UpdateCompany(System.Guid,Entities.DataTransferObjects.CompanyForUpdateDto)">
+            <summary>
+            Редактирует компанию
+            </summary>
+            <returns> Список компаний</returns>
+        </member>
+        <member name="M:WebAPI.Controllers.EmployeesController.GetEmployeesForCompany(System.Guid,Entities.RequestFeatures.EmployeeParameters)">
+            <summary>
+            Получает список всех сотрудников для определенной компании
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.EmployeesController.GetEmployeeForCompany(System.Guid,System.Guid)">
+            <summary>
+            Получает определенного сотрудника для определенной компании
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.EmployeesController.CreateEmployeeForCompany(System.Guid,Entities.DataTransferObjects.EmployeeForCreationDto)">
+            <summary>
+            Созает сотрудника для определенной компании
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.EmployeesController.DeleteEmployeeForCompany(System.Guid,System.Guid)">
+            <summary>
+            Удаляет сотрудника для определенной компании
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.EmployeesController.UpdateEmployeeForCompany(System.Guid,System.Guid,Entities.DataTransferObjects.EmployeeForUpdateDto)">
+            <summary>
+            Редактирует сотрудника для определенной компании
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.EmployeesController.PartiallyUpdateEmployeeForCompany(System.Guid,System.Guid,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{Entities.DataTransferObjects.EmployeeForUpdateDto})">
+            <summary>
+            Редактирует сотрудника для определенной компании
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.SchoolController.GetSchools">
+            <summary>
+            Получает список всех школ
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.SchoolController.GetSchool(System.Guid)">
+            <summary>
+            Получает школу
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.SchoolController.CreateSchool(Entities.DataTransferObjects.SchoolForCreationDto)">
+            <summary>
+            Создает школу
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.SchoolController.GetSchoolCollection(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Получает список определённых школ
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.SchoolController.CreateSchoolCollection(System.Collections.Generic.IEnumerable{Entities.DataTransferObjects.SchoolForCreationDto})">
+            <summary>
+            Создает несколько школ
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.SchoolController.DeleteSchool(System.Guid)">
+            <summary>
+            Удаляет школу
+            </summary>
+        </member>
+        <member name="M:WebAPI.Controllers.SchoolController.UpdateCompany(System.Guid,Entities.DataTransferObjects.SchoolForUpdateDto)">
+            <summary>
+            Ркдактирует школу
+            </summary>
+        </member>
+        <member name="T:WebAPI.Migrations.DatabaseCreation">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPI.Migrations.DatabaseCreation.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPI.Migrations.DatabaseCreation.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPI.Migrations.DatabaseCreation.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:WebAPI.Migrations.InitalData">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPI.Migrations.InitalData.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPI.Migrations.InitalData.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPI.Migrations.InitalData.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:WebAPI.Migrations.CreatingIdentityTables">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPI.Migrations.CreatingIdentityTables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPI.Migrations.CreatingIdentityTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPI.Migrations.CreatingIdentityTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:WebAPI.Migrations.AddedRolesToDb">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPI.Migrations.AddedRolesToDb.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPI.Migrations.AddedRolesToDb.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebAPI.Migrations.AddedRolesToDb.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

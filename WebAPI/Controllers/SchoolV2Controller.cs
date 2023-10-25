@@ -7,6 +7,7 @@ namespace WebAPI.Controllers
     [ApiVersion("2.0")]
     [Route("api/schools")]
     [ApiController]
+    [ApiExplorerSettings(GroupName = "v2")]
     public class SchoolV2Controller : ControllerBase
     {
         private readonly IRepositoryManager _repository;

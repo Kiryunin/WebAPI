@@ -12,6 +12,7 @@ namespace WebAPI.Controllers
     [ApiVersion("1.0")]
     [Route("api/schools")]
     [ApiController]
+    [ApiExplorerSettings(GroupName = "v1")]
     public class SchoolController : ControllerBase
     {
         private readonly IRepositoryManager _repository;
@@ -24,6 +25,9 @@ namespace WebAPI.Controllers
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// Получает список всех школ
+        /// </summary>
         [HttpGet]
         public async Task<IActionResult> GetSchools() 
         {
@@ -32,6 +36,9 @@ namespace WebAPI.Controllers
             return Ok(schoolsDto);
         }
 
+        /// <summary>
+        /// Получает школу
+        /// </summary>
         [HttpGet("{id}", Name = "SchoolById")]
         public async Task<IActionResult> GetSchool(Guid id)
         {
@@ -48,6 +55,9 @@ namespace WebAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Создает школу
+        /// </summary>
         [HttpPost]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> CreateSchool([FromBody] SchoolForCreationDto school)
@@ -59,6 +69,9 @@ namespace WebAPI.Controllers
             return CreatedAtRoute("SchoolById", new { id = schoolToReturn.Id }, schoolToReturn);
         }
 
+        /// <summary>
+        /// Получает список определённых школ
+        /// </summary>
         [HttpGet("collection/({ids})", Name = "SchoolCollection")]
         public async Task<IActionResult> GetSchoolCollection([ModelBinder(BinderType = typeof(ArrayModelBinder))] IEnumerable<Guid> ids)
         {
@@ -77,6 +90,9 @@ namespace WebAPI.Controllers
             return Ok(schoolsToReturn);
         }
 
+        /// <summary>
+        /// Создает несколько школ
+        /// </summary>
         [HttpPost("collection")]
         public async Task<IActionResult> CreateSchoolCollection([FromBody] IEnumerable<SchoolForCreationDto> schoolCollection)
         {
@@ -96,6 +112,9 @@ namespace WebAPI.Controllers
             return CreatedAtRoute("SchoolCollection", new { ids }, schoolCollectionToReturn);
         }
 
+        /// <summary>
+        /// Удаляет школу
+        /// </summary>
         [HttpDelete("{id}")]
         [ServiceFilter(typeof(ValidateSchoolExistsAttribute))]
         public async Task<IActionResult> DeleteSchool (Guid id)
@@ -106,6 +125,9 @@ namespace WebAPI.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Ркдактирует школу
+        /// </summary>
         [HttpPut("{id}")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         [ServiceFilter(typeof(ValidateSchoolExistsAttribute))]
