@@ -22,6 +22,8 @@ namespace WebAPI
             CreateMap<SchoolForUpdateDto, School>();
             CreateMap<EmployeeForUpdateDto, Employee>().ReverseMap();
             CreateMap<ClassroomForUpdateDto, Classroom>().ReverseMap();
+            CreateMap<UserForRegistrationDto, User>();
+
         }
     }
 }

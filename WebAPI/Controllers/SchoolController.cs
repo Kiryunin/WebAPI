@@ -9,6 +9,7 @@ using WebAPI.ModelBinders;
 
 namespace WebAPI.Controllers
 {
+    [ApiVersion("1.0")]
     [Route("api/schools")]
     [ApiController]
     public class SchoolController : ControllerBase

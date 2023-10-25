@@ -3176,3 +3176,695 @@
 2023-10-25 23:16:20.6617 Trace  Scanning Property LineEnding 'Default' NLog.Targets
 2023-10-25 23:16:20.6617 Trace FileTarget(Name=logfile) has 2 layouts
 2023-10-25 23:16:20.6617 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-10-25 23:33:24.4337 Info Message Template Auto Format enabled
+2023-10-25 23:33:24.4645 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-10-25 23:33:24.5135 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2023-10-25 23:33:24.5135 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:33:24.5254 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:33:24.5254 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:33:24.5254 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:33:24.5254 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:33:24.5254 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:33:24.5254 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:33:24.5349 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:33:24.5349 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:33:24.5349 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:33:24.5349 Info Adding target FileTarget(Name=logfile)
+2023-10-25 23:33:24.5349 Debug Registered target logfile: NLog.Targets.FileTarget
+2023-10-25 23:33:24.5349 Trace ParseRulesElement
+2023-10-25 23:33:24.5548 Debug Watching file-filter 'nlog.config' in directory: C:\Users\Kirill\source\repos\WebAPI\WebAPI
+2023-10-25 23:33:24.5548 Debug --- NLog configuration dump ---
+2023-10-25 23:33:24.5548 Debug Targets:
+2023-10-25 23:33:24.5548 Debug FileTarget(Name=logfile)
+2023-10-25 23:33:24.5548 Debug Rules:
+2023-10-25 23:33:24.5548 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-10-25 23:33:24.5548 Debug --- End of NLog configuration dump ---
+2023-10-25 23:33:24.5548 Trace FindReachableObject<System.Object>:
+2023-10-25 23:33:24.5663 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-10-25 23:33:24.5663 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-10-25 23:33:24.5663 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-25 23:33:24.5663 Trace   Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-25 23:33:24.5663 Trace   Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:33:24.5663 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:33:24.5663 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:33:24.5663 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:33:24.5663 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:33:24.5663 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-25 23:33:24.5663 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:33:24.5663 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:33:24.5663 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:33:24.5663 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:33:24.5663 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:33:24.5663 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:33:24.5663 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:33:24.5663 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-25 23:33:24.5663 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-10-25 23:33:24.5663 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-10-25 23:33:24.5663 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Kirill\source\repos\WebAPI\WebAPI\nlog.config
+2023-10-25 23:33:24.5829 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2023-10-25 23:33:24.5829 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2023-10-25 23:33:24.5829 Trace Initializing Layout Renderer: ${message}
+2023-10-25 23:33:24.5829 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:33:24.5829 Trace Initializing Layout Renderer: ${level}
+2023-10-25 23:33:24.5829 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:33:24.5829 Trace Initializing Layout Renderer: ${longdate}
+2023-10-25 23:33:24.5829 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-10-25 23:33:24.5829 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:33:24.5829 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:33:24.5829 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:33:24.5829 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:33:24.5829 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:33:24.5829 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:33:24.5978 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:33:24.5978 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:33:24.5978 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:33:24.5978 Trace Initializing Layout Renderer: ${shortdate}
+2023-10-25 23:33:24.5978 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:33:24.5978 Trace Initializing C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt
+2023-10-25 23:33:24.5978 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:33:24.5978 Trace Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:33:24.5978 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:33:24.5978 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:33:24.5978 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:33:24.5978 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:33:24.5978 Trace Initializing FileTarget(Name=logfile)
+2023-10-25 23:33:24.5978 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-10-25 23:33:24.5978 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-25 23:33:24.5978 Trace  Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-25 23:33:24.5978 Trace  Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:33:24.5978 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-25 23:33:24.5978 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:33:24.5978 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-25 23:33:24.5978 Trace FileTarget(Name=logfile) has 2 layouts
+2023-10-25 23:33:24.5978 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-10-25 23:33:26.5105 Info AppDomain Shutting down. LogFactory closing...
+2023-10-25 23:33:26.5105 Debug Stopping file watching for path 'C:\Users\Kirill\source\repos\WebAPI\WebAPI' filter 'nlog.config'
+2023-10-25 23:33:26.5105 Trace Flushing all 1 targets...
+2023-10-25 23:33:26.5105 Trace ForEachItemInParallel() 1 items
+2023-10-25 23:33:26.5201 Trace FileTarget(Name=logfile): FlushAsync
+2023-10-25 23:33:26.5201 Trace Continuation invoked: 
+2023-10-25 23:33:26.5201 Trace Parallel task completed. 0 items remaining
+2023-10-25 23:33:26.5201 Debug Flush completed
+2023-10-25 23:33:26.5201 Trace FileTarget(Name=logfile): FlushAsync Done
+2023-10-25 23:33:26.5201 Debug Closing logging configuration...
+2023-10-25 23:33:26.5201 Trace Closing FileTarget(Name=logfile)
+2023-10-25 23:33:26.5201 Debug FileTarget(Name=logfile): Closing...
+2023-10-25 23:33:26.5201 Debug FileTarget(Name=logfile): Closed.
+2023-10-25 23:33:26.5201 Trace Closing C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt
+2023-10-25 23:33:26.5201 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:33:26.5201 Trace Closing Layout Renderer: ${shortdate}
+2023-10-25 23:33:26.5201 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:33:26.5201 Trace Closing ${longdate} ${level:uppercase=true} ${message}
+2023-10-25 23:33:26.5201 Trace Closing Layout Renderer: ${longdate}
+2023-10-25 23:33:26.5201 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:33:26.5201 Trace Closing Layout Renderer: ${level}
+2023-10-25 23:33:26.5201 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:33:26.5201 Trace Closing Layout Renderer: ${message}
+2023-10-25 23:33:26.5201 Debug Finished closing logging configuration.
+2023-10-25 23:33:26.5201 Info LogFactory has been closed.
+2023-10-25 23:34:29.9322 Info Message Template Auto Format enabled
+2023-10-25 23:34:29.9515 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-10-25 23:34:29.9979 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2023-10-25 23:34:29.9979 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:34:30.0090 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:34:30.0090 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:34:30.0090 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:34:30.0090 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:34:30.0090 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:34:30.0192 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:34:30.0192 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:34:30.0192 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:34:30.0192 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:34:30.0192 Info Adding target FileTarget(Name=logfile)
+2023-10-25 23:34:30.0192 Debug Registered target logfile: NLog.Targets.FileTarget
+2023-10-25 23:34:30.0192 Trace ParseRulesElement
+2023-10-25 23:34:30.0398 Debug Watching file-filter 'nlog.config' in directory: C:\Users\Kirill\source\repos\WebAPI\WebAPI
+2023-10-25 23:34:30.0398 Debug --- NLog configuration dump ---
+2023-10-25 23:34:30.0398 Debug Targets:
+2023-10-25 23:34:30.0398 Debug FileTarget(Name=logfile)
+2023-10-25 23:34:30.0398 Debug Rules:
+2023-10-25 23:34:30.0398 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-10-25 23:34:30.0398 Debug --- End of NLog configuration dump ---
+2023-10-25 23:34:30.0523 Trace FindReachableObject<System.Object>:
+2023-10-25 23:34:30.0523 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-10-25 23:34:30.0523 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-10-25 23:34:30.0523 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-25 23:34:30.0523 Trace   Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-25 23:34:30.0523 Trace   Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:34:30.0523 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:34:30.0523 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:34:30.0523 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:34:30.0523 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:34:30.0523 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-25 23:34:30.0523 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:34:30.0523 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:34:30.0523 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:34:30.0523 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:34:30.0523 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:34:30.0523 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:34:30.0523 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:34:30.0523 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-25 23:34:30.0523 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-10-25 23:34:30.0523 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-10-25 23:34:30.0675 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Kirill\source\repos\WebAPI\WebAPI\nlog.config
+2023-10-25 23:34:30.0675 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2023-10-25 23:34:30.0675 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2023-10-25 23:34:30.0675 Trace Initializing Layout Renderer: ${message}
+2023-10-25 23:34:30.0675 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:34:30.0675 Trace Initializing Layout Renderer: ${level}
+2023-10-25 23:34:30.0675 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:34:30.0675 Trace Initializing Layout Renderer: ${longdate}
+2023-10-25 23:34:30.0675 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-10-25 23:34:30.0675 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:34:30.0675 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:34:30.0675 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:34:30.0675 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:34:30.0675 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:34:30.0675 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:34:30.0822 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:34:30.0822 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:34:30.0822 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:34:30.0822 Trace Initializing Layout Renderer: ${shortdate}
+2023-10-25 23:34:30.0822 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:34:30.0822 Trace Initializing C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt
+2023-10-25 23:34:30.0822 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:34:30.0822 Trace Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:34:30.0822 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:34:30.0822 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:34:30.0822 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:34:30.0822 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:34:30.0822 Trace Initializing FileTarget(Name=logfile)
+2023-10-25 23:34:30.0822 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-10-25 23:34:30.0822 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-25 23:34:30.0822 Trace  Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-25 23:34:30.0822 Trace  Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:34:30.0822 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-25 23:34:30.0822 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:34:30.0822 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-25 23:34:30.0822 Trace FileTarget(Name=logfile) has 2 layouts
+2023-10-25 23:34:30.0822 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-10-25 23:34:38.1128 Info AppDomain Shutting down. LogFactory closing...
+2023-10-25 23:34:38.1128 Debug Stopping file watching for path 'C:\Users\Kirill\source\repos\WebAPI\WebAPI' filter 'nlog.config'
+2023-10-25 23:34:38.1128 Trace Flushing all 1 targets...
+2023-10-25 23:34:38.1128 Trace ForEachItemInParallel() 1 items
+2023-10-25 23:34:38.1128 Trace FileTarget(Name=logfile): FlushAsync
+2023-10-25 23:34:38.1128 Trace Continuation invoked: 
+2023-10-25 23:34:38.1128 Trace Parallel task completed. 0 items remaining
+2023-10-25 23:34:38.1128 Debug Flush completed
+2023-10-25 23:34:38.1285 Trace FileTarget(Name=logfile): FlushAsync Done
+2023-10-25 23:34:38.1285 Debug Closing logging configuration...
+2023-10-25 23:34:38.1285 Trace Closing FileTarget(Name=logfile)
+2023-10-25 23:34:38.1285 Debug FileTarget(Name=logfile): Closing...
+2023-10-25 23:34:38.1285 Debug FileTarget(Name=logfile): Closed.
+2023-10-25 23:34:38.1285 Trace Closing C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt
+2023-10-25 23:34:38.1285 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:34:38.1285 Trace Closing Layout Renderer: ${shortdate}
+2023-10-25 23:34:38.1285 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:34:38.1285 Trace Closing ${longdate} ${level:uppercase=true} ${message}
+2023-10-25 23:34:38.1285 Trace Closing Layout Renderer: ${longdate}
+2023-10-25 23:34:38.1285 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:34:38.1285 Trace Closing Layout Renderer: ${level}
+2023-10-25 23:34:38.1285 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:34:38.1285 Trace Closing Layout Renderer: ${message}
+2023-10-25 23:34:38.1285 Debug Finished closing logging configuration.
+2023-10-25 23:34:38.1285 Info LogFactory has been closed.
+2023-10-25 23:36:28.4850 Info Message Template Auto Format enabled
+2023-10-25 23:36:28.5049 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-10-25 23:36:28.5495 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2023-10-25 23:36:28.5539 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:36:28.5539 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:36:28.5539 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:36:28.5539 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:36:28.5539 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:36:28.5664 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:36:28.5664 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:36:28.5664 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:36:28.5664 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:36:28.5664 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:36:28.5664 Info Adding target FileTarget(Name=logfile)
+2023-10-25 23:36:28.5664 Debug Registered target logfile: NLog.Targets.FileTarget
+2023-10-25 23:36:28.5664 Trace ParseRulesElement
+2023-10-25 23:36:28.5903 Debug Watching file-filter 'nlog.config' in directory: C:\Users\Kirill\source\repos\WebAPI\WebAPI
+2023-10-25 23:36:28.5903 Debug --- NLog configuration dump ---
+2023-10-25 23:36:28.5903 Debug Targets:
+2023-10-25 23:36:28.5903 Debug FileTarget(Name=logfile)
+2023-10-25 23:36:28.5903 Debug Rules:
+2023-10-25 23:36:28.5903 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-10-25 23:36:28.5903 Debug --- End of NLog configuration dump ---
+2023-10-25 23:36:28.6013 Trace FindReachableObject<System.Object>:
+2023-10-25 23:36:28.6013 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-10-25 23:36:28.6013 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-10-25 23:36:28.6013 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-25 23:36:28.6013 Trace   Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-25 23:36:28.6013 Trace   Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:36:28.6013 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:36:28.6013 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:28.6013 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:36:28.6013 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:28.6013 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-25 23:36:28.6013 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:36:28.6013 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:36:28.6013 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:36:28.6013 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:28.6013 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:36:28.6013 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:28.6013 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:36:28.6013 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-25 23:36:28.6013 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-10-25 23:36:28.6013 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-10-25 23:36:28.6149 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Kirill\source\repos\WebAPI\WebAPI\nlog.config
+2023-10-25 23:36:28.6149 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2023-10-25 23:36:28.6149 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2023-10-25 23:36:28.6149 Trace Initializing Layout Renderer: ${message}
+2023-10-25 23:36:28.6149 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:36:28.6149 Trace Initializing Layout Renderer: ${level}
+2023-10-25 23:36:28.6149 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:36:28.6149 Trace Initializing Layout Renderer: ${longdate}
+2023-10-25 23:36:28.6149 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-10-25 23:36:28.6283 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:36:28.6283 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:36:28.6283 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:36:28.6283 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:36:28.6283 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:28.6283 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:36:28.6283 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:28.6283 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:36:28.6283 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:36:28.6283 Trace Initializing Layout Renderer: ${shortdate}
+2023-10-25 23:36:28.6283 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:36:28.6283 Trace Initializing C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt
+2023-10-25 23:36:28.6283 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:36:28.6283 Trace Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:36:28.6283 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:36:28.6283 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:28.6283 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:36:28.6283 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:28.6283 Trace Initializing FileTarget(Name=logfile)
+2023-10-25 23:36:28.6283 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-10-25 23:36:28.6283 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-25 23:36:28.6283 Trace  Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-25 23:36:28.6283 Trace  Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:36:28.6283 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-25 23:36:28.6283 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:36:28.6283 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-25 23:36:28.6283 Trace FileTarget(Name=logfile) has 2 layouts
+2023-10-25 23:36:28.6283 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-10-25 23:36:30.5282 Info AppDomain Shutting down. LogFactory closing...
+2023-10-25 23:36:30.5282 Debug Stopping file watching for path 'C:\Users\Kirill\source\repos\WebAPI\WebAPI' filter 'nlog.config'
+2023-10-25 23:36:30.5282 Trace Flushing all 1 targets...
+2023-10-25 23:36:30.5357 Trace ForEachItemInParallel() 1 items
+2023-10-25 23:36:30.5357 Trace FileTarget(Name=logfile): FlushAsync
+2023-10-25 23:36:30.5357 Trace Continuation invoked: 
+2023-10-25 23:36:30.5357 Trace Parallel task completed. 0 items remaining
+2023-10-25 23:36:30.5357 Debug Flush completed
+2023-10-25 23:36:30.5357 Trace FileTarget(Name=logfile): FlushAsync Done
+2023-10-25 23:36:30.5357 Debug Closing logging configuration...
+2023-10-25 23:36:30.5357 Trace Closing FileTarget(Name=logfile)
+2023-10-25 23:36:30.5357 Debug FileTarget(Name=logfile): Closing...
+2023-10-25 23:36:30.5357 Debug FileTarget(Name=logfile): Closed.
+2023-10-25 23:36:30.5357 Trace Closing C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt
+2023-10-25 23:36:30.5357 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:36:30.5357 Trace Closing Layout Renderer: ${shortdate}
+2023-10-25 23:36:30.5357 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:36:30.5357 Trace Closing ${longdate} ${level:uppercase=true} ${message}
+2023-10-25 23:36:30.5357 Trace Closing Layout Renderer: ${longdate}
+2023-10-25 23:36:30.5504 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:36:30.5504 Trace Closing Layout Renderer: ${level}
+2023-10-25 23:36:30.5504 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:36:30.5504 Trace Closing Layout Renderer: ${message}
+2023-10-25 23:36:30.5504 Debug Finished closing logging configuration.
+2023-10-25 23:36:30.5504 Info LogFactory has been closed.
+2023-10-25 23:36:40.0088 Info Message Template Auto Format enabled
+2023-10-25 23:36:40.0277 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-10-25 23:36:40.0599 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2023-10-25 23:36:40.0599 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:36:40.0764 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:36:40.0764 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:36:40.0844 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:36:40.0844 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:36:40.0844 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:36:40.0844 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:36:40.0844 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:36:40.0844 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:36:40.0844 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:36:40.0844 Info Adding target FileTarget(Name=logfile)
+2023-10-25 23:36:40.0844 Debug Registered target logfile: NLog.Targets.FileTarget
+2023-10-25 23:36:40.0976 Trace ParseRulesElement
+2023-10-25 23:36:40.1204 Debug Watching file-filter 'nlog.config' in directory: C:\Users\Kirill\source\repos\WebAPI\WebAPI
+2023-10-25 23:36:40.1204 Debug --- NLog configuration dump ---
+2023-10-25 23:36:40.1204 Debug Targets:
+2023-10-25 23:36:40.1204 Debug FileTarget(Name=logfile)
+2023-10-25 23:36:40.1204 Debug Rules:
+2023-10-25 23:36:40.1204 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-10-25 23:36:40.1204 Debug --- End of NLog configuration dump ---
+2023-10-25 23:36:40.1319 Trace FindReachableObject<System.Object>:
+2023-10-25 23:36:40.1319 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-10-25 23:36:40.1319 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-10-25 23:36:40.1319 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-25 23:36:40.1319 Trace   Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-25 23:36:40.1319 Trace   Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:36:40.1319 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:36:40.1319 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:40.1319 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:36:40.1319 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:40.1319 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-25 23:36:40.1319 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:36:40.1319 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:36:40.1319 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:36:40.1319 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:40.1319 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:36:40.1319 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:40.1439 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:36:40.1439 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-25 23:36:40.1439 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-10-25 23:36:40.1439 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-10-25 23:36:40.1439 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Kirill\source\repos\WebAPI\WebAPI\nlog.config
+2023-10-25 23:36:40.1439 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2023-10-25 23:36:40.1652 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2023-10-25 23:36:40.1652 Trace Initializing Layout Renderer: ${message}
+2023-10-25 23:36:40.1652 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:36:40.1652 Trace Initializing Layout Renderer: ${level}
+2023-10-25 23:36:40.1652 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:36:40.1652 Trace Initializing Layout Renderer: ${longdate}
+2023-10-25 23:36:40.1652 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-10-25 23:36:40.1652 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:36:40.1652 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:36:40.1652 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:36:40.1652 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:36:40.1652 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:40.1652 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:36:40.1652 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:40.1652 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:36:40.1652 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:36:40.1652 Trace Initializing Layout Renderer: ${shortdate}
+2023-10-25 23:36:40.1652 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:36:40.1652 Trace Initializing C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt
+2023-10-25 23:36:40.1652 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:36:40.1750 Trace Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:36:40.1750 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:36:40.1750 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:40.1750 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:36:40.1750 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:36:40.1750 Trace Initializing FileTarget(Name=logfile)
+2023-10-25 23:36:40.1750 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-10-25 23:36:40.1750 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-25 23:36:40.1750 Trace  Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-25 23:36:40.1750 Trace  Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:36:40.1750 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-25 23:36:40.1750 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:36:40.1750 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-25 23:36:40.1750 Trace FileTarget(Name=logfile) has 2 layouts
+2023-10-25 23:36:40.1750 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-10-25 23:36:43.1101 Info AppDomain Shutting down. LogFactory closing...
+2023-10-25 23:36:43.1134 Debug Stopping file watching for path 'C:\Users\Kirill\source\repos\WebAPI\WebAPI' filter 'nlog.config'
+2023-10-25 23:36:43.1134 Trace Flushing all 1 targets...
+2023-10-25 23:36:43.1134 Trace ForEachItemInParallel() 1 items
+2023-10-25 23:36:43.1134 Trace FileTarget(Name=logfile): FlushAsync
+2023-10-25 23:36:43.1134 Trace Continuation invoked: 
+2023-10-25 23:36:43.1134 Trace Parallel task completed. 0 items remaining
+2023-10-25 23:36:43.1134 Debug Flush completed
+2023-10-25 23:36:43.1134 Trace FileTarget(Name=logfile): FlushAsync Done
+2023-10-25 23:36:43.1134 Debug Closing logging configuration...
+2023-10-25 23:36:43.1134 Trace Closing FileTarget(Name=logfile)
+2023-10-25 23:36:43.1134 Debug FileTarget(Name=logfile): Closing...
+2023-10-25 23:36:43.1287 Debug FileTarget(Name=logfile): Closed.
+2023-10-25 23:36:43.1287 Trace Closing C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt
+2023-10-25 23:36:43.1287 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:36:43.1287 Trace Closing Layout Renderer: ${shortdate}
+2023-10-25 23:36:43.1287 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:36:43.1287 Trace Closing ${longdate} ${level:uppercase=true} ${message}
+2023-10-25 23:36:43.1287 Trace Closing Layout Renderer: ${longdate}
+2023-10-25 23:36:43.1287 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:36:43.1287 Trace Closing Layout Renderer: ${level}
+2023-10-25 23:36:43.1287 Trace Closing Layout Renderer: ${literal}
+2023-10-25 23:36:43.1287 Trace Closing Layout Renderer: ${message}
+2023-10-25 23:36:43.1287 Debug Finished closing logging configuration.
+2023-10-25 23:36:43.1287 Info LogFactory has been closed.
+2023-10-25 23:56:14.8176 Info Message Template Auto Format enabled
+2023-10-25 23:56:15.0203 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-10-25 23:56:15.3445 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2023-10-25 23:56:15.3545 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:56:15.3661 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:56:15.3661 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:56:15.3661 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:56:15.3661 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:56:15.3661 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:56:15.3821 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:56:15.3821 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:56:15.3821 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:56:15.3821 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:56:15.3821 Info Adding target FileTarget(Name=logfile)
+2023-10-25 23:56:15.3821 Debug Registered target logfile: NLog.Targets.FileTarget
+2023-10-25 23:56:15.3821 Trace ParseRulesElement
+2023-10-25 23:56:15.4147 Debug Watching file-filter 'nlog.config' in directory: C:\Users\Kirill\source\repos\WebAPI\WebAPI
+2023-10-25 23:56:15.4147 Debug --- NLog configuration dump ---
+2023-10-25 23:56:15.4147 Debug Targets:
+2023-10-25 23:56:15.4147 Debug FileTarget(Name=logfile)
+2023-10-25 23:56:15.4147 Debug Rules:
+2023-10-25 23:56:15.4147 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-10-25 23:56:15.4147 Debug --- End of NLog configuration dump ---
+2023-10-25 23:56:15.4304 Trace FindReachableObject<System.Object>:
+2023-10-25 23:56:15.4304 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-10-25 23:56:15.4304 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-10-25 23:56:15.4304 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-25 23:56:15.4304 Trace   Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-25 23:56:15.4304 Trace   Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:56:15.4304 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:56:15.4304 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:56:15.4414 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:56:15.4414 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:56:15.4414 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-25 23:56:15.4414 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:56:15.4414 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:56:15.4414 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:56:15.4414 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:56:15.4414 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:56:15.4414 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:56:15.4414 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:56:15.4414 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-25 23:56:15.4414 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-10-25 23:56:15.4414 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-10-25 23:56:15.4567 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Kirill\source\repos\WebAPI\WebAPI\nlog.config
+2023-10-25 23:56:15.4567 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2023-10-25 23:56:15.4886 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2023-10-25 23:56:15.4886 Trace Initializing Layout Renderer: ${message}
+2023-10-25 23:56:15.4886 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:56:15.4886 Trace Initializing Layout Renderer: ${level}
+2023-10-25 23:56:15.4886 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:56:15.4886 Trace Initializing Layout Renderer: ${longdate}
+2023-10-25 23:56:15.4886 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-10-25 23:56:15.4886 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:56:15.4886 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:56:15.4886 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:56:15.4886 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:56:15.4886 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:56:15.4886 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:56:15.4886 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:56:15.4886 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:56:15.5073 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:56:15.5073 Trace Initializing Layout Renderer: ${shortdate}
+2023-10-25 23:56:15.5073 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:56:15.5073 Trace Initializing C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt
+2023-10-25 23:56:15.5073 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:56:15.5073 Trace Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:56:15.5073 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:56:15.5073 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:56:15.5073 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:56:15.5073 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:56:15.5073 Trace Initializing FileTarget(Name=logfile)
+2023-10-25 23:56:15.5073 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-10-25 23:56:15.5073 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-25 23:56:15.5073 Trace  Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-25 23:56:15.5073 Trace  Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:56:15.5073 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-25 23:56:15.5073 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:56:15.5194 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-25 23:56:15.5194 Trace FileTarget(Name=logfile) has 2 layouts
+2023-10-25 23:56:15.5194 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-10-25 23:58:42.8389 Info Message Template Auto Format enabled
+2023-10-25 23:58:42.9810 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-10-25 23:58:43.2373 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2023-10-25 23:58:43.2531 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:58:43.2729 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:58:43.2729 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:58:43.2885 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:58:43.2885 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:58:43.2885 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:58:43.2885 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:58:43.2885 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:58:43.3009 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:58:43.3009 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:58:43.3009 Info Adding target FileTarget(Name=logfile)
+2023-10-25 23:58:43.3009 Debug Registered target logfile: NLog.Targets.FileTarget
+2023-10-25 23:58:43.3009 Trace ParseRulesElement
+2023-10-25 23:58:43.3543 Debug Watching file-filter 'nlog.config' in directory: C:\Users\Kirill\source\repos\WebAPI\WebAPI
+2023-10-25 23:58:43.3543 Debug --- NLog configuration dump ---
+2023-10-25 23:58:43.3543 Debug Targets:
+2023-10-25 23:58:43.3657 Debug FileTarget(Name=logfile)
+2023-10-25 23:58:43.3657 Debug Rules:
+2023-10-25 23:58:43.3657 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-10-25 23:58:43.3657 Debug --- End of NLog configuration dump ---
+2023-10-25 23:58:43.3855 Trace FindReachableObject<System.Object>:
+2023-10-25 23:58:43.3855 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-10-25 23:58:43.3855 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-10-25 23:58:43.3951 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-25 23:58:43.3951 Trace   Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-25 23:58:43.3951 Trace   Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:58:43.3951 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:58:43.3951 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:58:43.3951 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:58:43.3951 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:58:43.3951 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-25 23:58:43.3951 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:58:43.3951 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:58:43.4477 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:58:43.4708 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:58:43.4747 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:58:43.4747 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:58:43.4747 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:58:43.4747 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-25 23:58:43.4747 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-10-25 23:58:43.4747 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-10-25 23:58:43.5004 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Kirill\source\repos\WebAPI\WebAPI\nlog.config
+2023-10-25 23:58:43.5086 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2023-10-25 23:58:43.5196 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2023-10-25 23:58:43.5196 Trace Initializing Layout Renderer: ${message}
+2023-10-25 23:58:43.5196 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:58:43.5196 Trace Initializing Layout Renderer: ${level}
+2023-10-25 23:58:43.5196 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:58:43.5196 Trace Initializing Layout Renderer: ${longdate}
+2023-10-25 23:58:43.5196 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-10-25 23:58:43.5196 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:58:43.5196 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:58:43.5364 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:58:43.5364 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-25 23:58:43.5364 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:58:43.5364 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-25 23:58:43.5364 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:58:43.5364 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-25 23:58:43.5364 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:58:43.5364 Trace Initializing Layout Renderer: ${shortdate}
+2023-10-25 23:58:43.5364 Trace Initializing Layout Renderer: ${literal}
+2023-10-25 23:58:43.5512 Trace Initializing C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt
+2023-10-25 23:58:43.5512 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-25 23:58:43.5512 Trace Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:58:43.5512 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-25 23:58:43.5512 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:58:43.5512 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-25 23:58:43.5512 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-25 23:58:43.5512 Trace Initializing FileTarget(Name=logfile)
+2023-10-25 23:58:43.5512 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-10-25 23:58:43.5512 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-25 23:58:43.5657 Trace  Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-25 23:58:43.5657 Trace  Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-25 23:58:43.5657 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-25 23:58:43.5657 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-25 23:58:43.5657 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-25 23:58:43.5657 Trace FileTarget(Name=logfile) has 2 layouts
+2023-10-25 23:58:43.5657 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-10-26 00:05:09.0254 Info Message Template Auto Format enabled
+2023-10-26 00:05:09.0859 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-10-26 00:05:09.2359 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2023-10-26 00:05:09.2442 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-26 00:05:09.2635 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-26 00:05:09.2635 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-26 00:05:09.2782 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-10-26 00:05:09.2782 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-26 00:05:09.2844 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-26 00:05:09.3137 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-26 00:05:09.3164 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-26 00:05:09.3164 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-26 00:05:09.3164 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-26 00:05:09.3164 Info Adding target FileTarget(Name=logfile)
+2023-10-26 00:05:09.3164 Debug Registered target logfile: NLog.Targets.FileTarget
+2023-10-26 00:05:09.3164 Trace ParseRulesElement
+2023-10-26 00:05:09.3836 Debug Watching file-filter 'nlog.config' in directory: C:\Users\Kirill\source\repos\WebAPI\WebAPI
+2023-10-26 00:05:09.3836 Debug --- NLog configuration dump ---
+2023-10-26 00:05:09.3836 Debug Targets:
+2023-10-26 00:05:09.3836 Debug FileTarget(Name=logfile)
+2023-10-26 00:05:09.3836 Debug Rules:
+2023-10-26 00:05:09.3994 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-10-26 00:05:09.3994 Debug --- End of NLog configuration dump ---
+2023-10-26 00:05:09.4119 Trace FindReachableObject<System.Object>:
+2023-10-26 00:05:09.4119 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-10-26 00:05:09.4119 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-10-26 00:05:09.4119 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-26 00:05:09.4119 Trace   Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-26 00:05:09.4119 Trace   Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-26 00:05:09.4119 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-26 00:05:09.4119 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-26 00:05:09.4257 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-26 00:05:09.4257 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-26 00:05:09.4257 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-26 00:05:09.4257 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-26 00:05:09.4257 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-26 00:05:09.4257 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-26 00:05:09.4257 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-26 00:05:09.4257 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-26 00:05:09.4257 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-26 00:05:09.4257 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-26 00:05:09.4257 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-26 00:05:09.4257 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-10-26 00:05:09.4257 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-10-26 00:05:09.4257 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Kirill\source\repos\WebAPI\WebAPI\nlog.config
+2023-10-26 00:05:09.4437 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2023-10-26 00:05:09.4437 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2023-10-26 00:05:09.4437 Trace Initializing Layout Renderer: ${message}
+2023-10-26 00:05:09.4437 Trace Initializing Layout Renderer: ${literal}
+2023-10-26 00:05:09.4437 Trace Initializing Layout Renderer: ${level}
+2023-10-26 00:05:09.4437 Trace Initializing Layout Renderer: ${literal}
+2023-10-26 00:05:09.4564 Trace Initializing Layout Renderer: ${longdate}
+2023-10-26 00:05:09.4564 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-10-26 00:05:09.4564 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-26 00:05:09.4564 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-26 00:05:09.4564 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-26 00:05:09.4564 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-10-26 00:05:09.4564 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-26 00:05:09.4564 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-10-26 00:05:09.4564 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-26 00:05:09.4564 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-10-26 00:05:09.4564 Trace Initializing Layout Renderer: ${literal}
+2023-10-26 00:05:09.4564 Trace Initializing Layout Renderer: ${shortdate}
+2023-10-26 00:05:09.4564 Trace Initializing Layout Renderer: ${literal}
+2023-10-26 00:05:09.4564 Trace Initializing C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt
+2023-10-26 00:05:09.4564 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-10-26 00:05:09.4564 Trace Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-26 00:05:09.4722 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-10-26 00:05:09.4722 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-26 00:05:09.4722 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-10-26 00:05:09.4722 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-10-26 00:05:09.4722 Trace Initializing FileTarget(Name=logfile)
+2023-10-26 00:05:09.4722 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-10-26 00:05:09.4722 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-10-26 00:05:09.4722 Trace  Scanning Property FileName 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-10-26 00:05:09.4722 Trace  Scanning SimpleLayout 'C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt'
+2023-10-26 00:05:09.4722 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-10-26 00:05:09.4722 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-10-26 00:05:09.4722 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-10-26 00:05:09.4722 Trace FileTarget(Name=logfile) has 2 layouts
+2023-10-26 00:05:09.4899 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-10-26 00:10:04.0264 Info AppDomain Shutting down. LogFactory closing...
+2023-10-26 00:10:04.0462 Debug Stopping file watching for path 'C:\Users\Kirill\source\repos\WebAPI\WebAPI' filter 'nlog.config'
+2023-10-26 00:10:04.0553 Trace Flushing all 1 targets...
+2023-10-26 00:10:04.0553 Trace ForEachItemInParallel() 1 items
+2023-10-26 00:10:04.0675 Trace FileTarget(Name=logfile): FlushAsync
+2023-10-26 00:10:04.0675 Trace Continuation invoked: 
+2023-10-26 00:10:04.0675 Trace Parallel task completed. 0 items remaining
+2023-10-26 00:10:04.0675 Debug Flush completed
+2023-10-26 00:10:04.0675 Trace FileTarget(Name=logfile): FlushAsync Done
+2023-10-26 00:10:04.0675 Debug Closing logging configuration...
+2023-10-26 00:10:04.0675 Trace Closing FileTarget(Name=logfile)
+2023-10-26 00:10:04.0675 Debug FileTarget(Name=logfile): Closing...
+2023-10-26 00:10:04.0861 Debug FileTarget(Name=logfile): Closed.
+2023-10-26 00:10:04.0861 Trace Closing C:\Users\Kirill\source\repos\WebAPI\WebAPI\Project\logs\${shortdate}_logfile.txt
+2023-10-26 00:10:04.0861 Trace Closing Layout Renderer: ${literal}
+2023-10-26 00:10:04.0861 Trace Closing Layout Renderer: ${shortdate}
+2023-10-26 00:10:04.0861 Trace Closing Layout Renderer: ${literal}
+2023-10-26 00:10:04.0861 Trace Closing ${longdate} ${level:uppercase=true} ${message}
+2023-10-26 00:10:04.0861 Trace Closing Layout Renderer: ${longdate}
+2023-10-26 00:10:04.0979 Trace Closing Layout Renderer: ${literal}
+2023-10-26 00:10:04.0979 Trace Closing Layout Renderer: ${level}
+2023-10-26 00:10:04.0979 Trace Closing Layout Renderer: ${literal}
+2023-10-26 00:10:04.0979 Trace Closing Layout Renderer: ${message}
+2023-10-26 00:10:04.0979 Debug Finished closing logging configuration.
+2023-10-26 00:10:04.0979 Info LogFactory has been closed.

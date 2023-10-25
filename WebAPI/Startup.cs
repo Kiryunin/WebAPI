@@ -48,7 +48,15 @@ public class Startup
         services.AddScoped<IDataShaper<ClassroomDto>, DataShaper<ClassroomDto>>();
         services.ConfigureVersioning();
         services.AddEndpointsApiExplorer();
-        services.AddSwaggerGen();
+        services.AddSwaggerGen(options =>
+        {
+            options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+        });
+        services.AddAuthentication();
+        services.ConfigureIdentity();
+        services.ConfigureJWT(Configuration);
+        services.AddScoped<IAuthenticationManager, AuthenticationManager>();
+
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -71,6 +79,7 @@ public class Startup
 
         app.UseRouting();
 
+        app.UseAuthentication();
         app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
 {
+    [ApiVersion("2.0")]
     [Route("api/schools")]
     [ApiController]
     public class SchoolV2Controller : ControllerBase
