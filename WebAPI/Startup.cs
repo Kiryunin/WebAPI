@@ -1,7 +1,9 @@
 ﻿using Contracts;
+using Entities.DataTransferObjects;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
+using Repository;
 using WebAPI.ActionFilters;
 using WebAPI.Extensions;
 
@@ -42,6 +44,8 @@ public class Startup
         services.AddScoped<ValidateSchoolExistsAttribute>();
         services.AddScoped<ValidateEmployeeForCompanyExistsAttribute>();
         services.AddScoped<ValidateClassroomForSchoolExistsAttribute>();
+        services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
+        services.AddScoped<IDataShaper<ClassroomDto>, DataShaper<ClassroomDto>>();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
     }

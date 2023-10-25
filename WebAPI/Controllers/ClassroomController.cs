@@ -18,12 +18,15 @@ namespace WebAPI.Controllers
         private readonly IRepositoryManager _repository;
         private readonly ILoggerManager _logger;
         private readonly IMapper _mapper;
+        private readonly IDataShaper<ClassroomDto> _dataShaper;
 
-        public ClassroomController(IRepositoryManager repository, ILoggerManager logger, IMapper mapper)
+
+        public ClassroomController(IRepositoryManager repository, ILoggerManager logger, IMapper mapper, IDataShaper<ClassroomDto> dataShaper)
         {
             _repository = repository;
             _logger = logger;
             _mapper = mapper;
+            _dataShaper = dataShaper;
         }
 
         [HttpGet]
@@ -41,7 +44,7 @@ namespace WebAPI.Controllers
             var classroomsFromDb = await _repository.Classroom.GetClassroomsAsync(schoolId, classroomParameters, trackChanges: false);
             Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(classroomsFromDb.MetaData));
             var classroomssDto = _mapper.Map<IEnumerable<ClassroomDto>>(classroomsFromDb);
-            return Ok(classroomssDto);
+            return Ok(_dataShaper.ShapeData(classroomssDto, classroomParameters.Fields));
         }
 
         [HttpGet("{id}", Name = "GetClassroomForSchool")]
