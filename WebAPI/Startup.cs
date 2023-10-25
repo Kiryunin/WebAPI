@@ -46,6 +46,7 @@ public class Startup
         services.AddScoped<ValidateClassroomForSchoolExistsAttribute>();
         services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
         services.AddScoped<IDataShaper<ClassroomDto>, DataShaper<ClassroomDto>>();
+        services.ConfigureVersioning();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
     }

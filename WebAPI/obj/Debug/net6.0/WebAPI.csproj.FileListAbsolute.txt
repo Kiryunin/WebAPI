@@ -103,3 +103,4 @@ C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore
 C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
+C:\Users\Kirill\source\repos\WebAPI\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll

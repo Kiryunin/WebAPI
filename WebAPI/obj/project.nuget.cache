@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5ORnIhEidywTMbdKiybgzEWpN6+p24ryvUc+wi3d0OafZR4SDbJIE1wKe+3yjYriEYgc6eTomxXJ/v43xW3Rwg==",
+  "dgSpecHash": "rZtGvwNi3dM1HEcx7Yf0aiJkwXMGw2ZTfnLuJVAvksiMO7HR38nI/V7kBdQ8bZBagIbD/nq1oy2QcwqIHsvYMw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\Kirill\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.24\\microsoft.aspnetcore.jsonpatch.6.0.24.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.24\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.24.nupkg.sha512",
+    "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.1.0\\microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
