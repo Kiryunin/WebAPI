@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U0LRwwMUhmkecYa6tSN2pKRDsXMjMprmGXQyjnHDVVj2M1QKgltOB3Vova1O6kY2v7LTl9KDnD9e1BLrnVbeiw==",
+  "dgSpecHash": "Uk37CtOyrxnnLhNQAroJS3+QEDNE0ybQcwGTbUm2yFySZDKc+Yk15/24vcAa9defg4dkPvR+tFThh7Pzm9OrIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kirill\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

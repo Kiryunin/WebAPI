@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Contracts\\Contracts.csproj": {}
+    "C:\\Users\\Kirill\\Desktop\\WebAPI\\Contracts\\Contracts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Contracts\\Contracts.csproj": {
+    "C:\\Users\\Kirill\\Desktop\\WebAPI\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Contracts\\Contracts.csproj",
+        "projectPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\Kirill\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Contracts\\obj\\",
+        "outputPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kirill\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Entities\\Entities.csproj"
+              "C:\\Users\\Kirill\\Desktop\\WebAPI\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Entities\\Entities.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Entities\\Entities.csproj": {
+    "C:\\Users\\Kirill\\Desktop\\WebAPI\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Kirill\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kirill\\AppData\\Roaming\\NuGet\\NuGet.Config",

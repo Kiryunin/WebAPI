@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vLB2hyjsSzbSwdX670F9G5Jj30DuXMgoy+xr+bmpBZrVLfIPLcaQV9GmidrJsTw4SdDlUF46QxLg2gqPsY+SGQ==",
+  "dgSpecHash": "V4m5iyeZeFC+8wLygznUEG0xOZXh/+3lNsQunZT4sacVAsVAUewIfZ8EiBZlxhKM9jLVVzCNxpUdbEErctlfDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\LoggerService\\LoggerService.csproj",
+  "projectFilePath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\LoggerService\\LoggerService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.23\\microsoft.entityframeworkcore.6.0.23.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.23\\microsoft.entityframeworkcore.abstractions.6.0.23.nupkg.sha512",

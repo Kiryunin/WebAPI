@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q2CVwMdUupk2NMhNUHS+A2Bu7+2kaXOEH/C/PRicCHbPEMnzulPYEMVlxu0L0OU+6yQG+bdmqnI8tkeSRoRZ5w==",
+  "dgSpecHash": "UH43PZy32LG2VFAw1r6SL4TDhJKflRC/MlSlZCKpdjZuHbM9H9n004D8k7kysDJqZbdLLdUubbbV4BOBq5tCOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Repository\\Repository.csproj",
+  "projectFilePath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.12\\microsoft.entityframeworkcore.7.0.12.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.12\\microsoft.entityframeworkcore.abstractions.7.0.12.nupkg.sha512",

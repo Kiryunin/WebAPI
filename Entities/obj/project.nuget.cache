@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b9scJHUxnJXV/9CHA83o+GWtm/NINyfvcmUPWDGTIcMaSNsN81o24mMpdgF5pMsssefjh95vmCHAwB7o0TDCZA==",
+  "dgSpecHash": "si/VmcQZoZEOx5bjdyvOzvP4YScPVMigEDaoVF6NhT03C1RR7z9rhslxZS0WmUfL/8iEdDxmqMLByM0wiKgSow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.23\\microsoft.entityframeworkcore.6.0.23.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.23\\microsoft.entityframeworkcore.abstractions.6.0.23.nupkg.sha512",

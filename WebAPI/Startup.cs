@@ -23,7 +23,6 @@ public class Startup
         services.ConfigureLoggerService();
         services.ConfigureSqlContext(Configuration);
         services.ConfigureRepositoryManager();
-        services.AddAutoMapper(typeof(Startup));
         services.AddControllers();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
@@ -38,7 +37,6 @@ public class Startup
             app.UseSwagger();
             app.UseSwaggerUI();
         }
-        app.ConfigureExceptionHandler(logger);
         app.UseHttpsRedirection();
         app.UseStaticFiles();
         app.UseCors("CorsPolicy");

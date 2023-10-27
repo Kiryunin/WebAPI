@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G+wplVYslImelM27hm1rAdcZpqGR8Gj4SLG+yF5nWo7Q+sdUQGSVsDbGmUF2HpvhgBI2tvUULfWhWghQ9RT0EA==",
+  "dgSpecHash": "gIVgU9qLh3auZQY7/IoT+r95isCf9m+c7jnj7XaqVocLXRuIY4KuMTPxH3qgsEQx1suTPya8EwzCd6IQ2So0Nw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Contracts\\Contracts.csproj",
+  "projectFilePath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Contracts\\Contracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.23\\microsoft.entityframeworkcore.6.0.23.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.23\\microsoft.entityframeworkcore.abstractions.6.0.23.nupkg.sha512",
