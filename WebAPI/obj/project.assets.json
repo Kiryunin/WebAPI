@@ -3782,11 +3782,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Kirill\\Desktop\\WebAPI\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\Kirill\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kirill\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3803,14 +3803,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Entities\\Entities.csproj"
+            "C:\\Users\\Kirill\\Desktop\\WebAPI\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Entities\\Entities.csproj"
             },
-            "C:\\Users\\Kirill\\source\\repos\\WebAPI\\LoggerService\\LoggerService.csproj": {
-              "projectPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\LoggerService\\LoggerService.csproj"
+            "C:\\Users\\Kirill\\Desktop\\WebAPI\\LoggerService\\LoggerService.csproj": {
+              "projectPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\LoggerService\\LoggerService.csproj"
             },
-            "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Repository\\Repository.csproj": {
-              "projectPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Repository\\Repository.csproj"
+            "C:\\Users\\Kirill\\Desktop\\WebAPI\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Repository\\Repository.csproj"
             }
           }
         }

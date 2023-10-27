@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P2Rl3O0/NuCIKwBwFt69HXIfnCKuDJzXFBZsK5urxX6tIKnfTwejx6dXZAyh1TaIiVwJJ2g22+e8MLJ4P8yRGQ==",
+  "dgSpecHash": "BW2oahs0EYgxc7x58A4jirAYTDCYLkVTlV3TbTQeW5D+TqinM9yWsSPm0U8V5gm4toqR3y/G8GLlKac/eFtqQg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\LoggerService\\LoggerService.csproj",
+  "projectFilePath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\LoggerService\\LoggerService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.23\\microsoft.aspnetcore.cryptography.internal.6.0.23.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.23\\microsoft.aspnetcore.cryptography.keyderivation.6.0.23.nupkg.sha512",

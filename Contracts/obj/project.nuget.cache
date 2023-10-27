@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IV3h2Gdmg+MgHIdLmwnylk2L0+ahhq8Bc3XvqyitUeDtkejLhmDBO8apyZNxdm/4OWnhxvH9tPs6m6EaYYdMbA==",
+  "dgSpecHash": "8uSNiMx+brP2Cc2HsaSSkEu3ok95q31K08ST87xSKGJFaX7CUuaibfShPTbMK2fiqYF67NkLGgdxtpjpgnG0DQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Contracts\\Contracts.csproj",
+  "projectFilePath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Contracts\\Contracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.23\\microsoft.aspnetcore.cryptography.internal.6.0.23.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.23\\microsoft.aspnetcore.cryptography.keyderivation.6.0.23.nupkg.sha512",

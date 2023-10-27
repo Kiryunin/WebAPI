@@ -985,11 +985,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\LoggerService\\LoggerService.csproj",
+      "projectUniqueName": "C:\\Users\\Kirill\\Desktop\\WebAPI\\LoggerService\\LoggerService.csproj",
       "projectName": "LoggerService",
-      "projectPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\LoggerService\\LoggerService.csproj",
+      "projectPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\LoggerService\\LoggerService.csproj",
       "packagesPath": "C:\\Users\\Kirill\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\LoggerService\\obj\\",
+      "outputPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\LoggerService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kirill\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1006,8 +1006,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Contracts\\Contracts.csproj": {
-              "projectPath": "C:\\Users\\Kirill\\source\\repos\\WebAPI\\Contracts\\Contracts.csproj"
+            "C:\\Users\\Kirill\\Desktop\\WebAPI\\Contracts\\Contracts.csproj": {
+              "projectPath": "C:\\Users\\Kirill\\Desktop\\WebAPI\\Contracts\\Contracts.csproj"
             }
           }
         }

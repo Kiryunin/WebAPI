@@ -32,6 +32,9 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Получает список всех учебных классов для определенной школы
         /// </summary>
+        /// <param name="schoolId">Id школы</param>
+        /// <param name="classroomParameters">Параметры получения ответа от сервера</param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetClassroomsForSchool(Guid schoolId, [FromQuery] ClassroomParameters classroomParameters)
         {
@@ -53,6 +56,9 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Получает учебный класс для определенной школы
         /// </summary>
+        /// <param name="schoolId">Id школы</param>
+        /// <param name="id">Id класса</param>
+        /// <returns></returns>
         [HttpGet("{id}", Name = "GetClassroomForSchool")]
         public async Task<IActionResult> GetClassroomForSchoolAsync(Guid schoolId, Guid id)
         {
@@ -75,6 +81,9 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Создает учебный класс для определенной школы
         /// </summary>
+        /// <param name="schoolId">Id школы</param>
+        /// <param name="classroom">Объект для создания класса</param>
+        /// <returns></returns>
         [HttpPost]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> CreateClassroomForSchoolAsync(Guid schoolId, [FromBody] ClassroomForCreationDto classroom)
@@ -106,6 +115,9 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Удаляет учебный класс для определенной школы
         /// </summary>
+        /// <param name="schoolId">Id школы</param>
+        /// <param name="id">Id класса</param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         [ServiceFilter(typeof(ValidateClassroomForSchoolExistsAttribute))]
 
@@ -120,6 +132,10 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Редактирует учебный класс для определенной школы
         /// </summary>
+        /// <param name="schoolId">Id школы</param>
+        /// <param name="id">Id класса</param>
+        /// <param name="classroom">Объект редактированного класса</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         [ServiceFilter(typeof(ValidateClassroomForSchoolExistsAttribute))]
@@ -134,6 +150,10 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Редактирует учебный класс для определенной школы
         /// </summary>
+        /// <param name="schoolId">Id школы</param>
+        /// <param name="id">Id класса</param>
+        /// <param name="patchDoc">Параметры patch запроса</param>
+        /// <returns></returns>
         [HttpPatch("{id}")]
         [ServiceFilter(typeof(ValidateClassroomForSchoolExistsAttribute))]
         public async Task<IActionResult> PartiallyUpdateClassroomForSchool(Guid schoolId, Guid id, [FromBody] JsonPatchDocument<ClassroomForUpdateDto> patchDoc)

@@ -28,6 +28,7 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Получает список всех школ
         /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetSchools() 
         {
@@ -39,6 +40,8 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Получает школу
         /// </summary>
+        /// <param name="id">Id школы</param>
+        /// <returns></returns>
         [HttpGet("{id}", Name = "SchoolById")]
         public async Task<IActionResult> GetSchool(Guid id)
         {
@@ -58,6 +61,8 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Создает школу
         /// </summary>
+        /// <param name="school">Объект для создания школы</param>
+        /// <returns></returns>
         [HttpPost]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> CreateSchool([FromBody] SchoolForCreationDto school)
@@ -72,6 +77,8 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Получает список определённых школ
         /// </summary>
+        /// <param name="ids">Id компаний которые хотим получить</param>
+        /// <returns></returns>
         [HttpGet("collection/({ids})", Name = "SchoolCollection")]
         public async Task<IActionResult> GetSchoolCollection([ModelBinder(BinderType = typeof(ArrayModelBinder))] IEnumerable<Guid> ids)
         {
@@ -93,6 +100,8 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Создает несколько школ
         /// </summary>
+        /// <param name="schoolCollection">>Коллекция объектов новых школ</param>
+        /// <returns></returns>
         [HttpPost("collection")]
         public async Task<IActionResult> CreateSchoolCollection([FromBody] IEnumerable<SchoolForCreationDto> schoolCollection)
         {
@@ -115,6 +124,8 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Удаляет школу
         /// </summary>
+        /// <param name="id">Id школы</param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         [ServiceFilter(typeof(ValidateSchoolExistsAttribute))]
         public async Task<IActionResult> DeleteSchool (Guid id)
@@ -128,6 +139,9 @@ namespace WebAPI.Controllers
         /// <summary>
         /// Ркдактирует школу
         /// </summary>
+        /// <param name="id">Id школы</param>
+        /// <param name="school">Объект редактированной школы</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         [ServiceFilter(typeof(ValidateSchoolExistsAttribute))]
