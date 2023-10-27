@@ -9,7 +9,6 @@ namespace Repository
         public CompanyRepository(RepositoryContext repositoryContext) : base (repositoryContext)
         {
         }
-
         public void Delete1(Company company) => Delete(company);
     }
 }
